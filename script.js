@@ -6,15 +6,15 @@ function getComputerChoice() {
 }
 function playRound(playerSelection, computerSelection){
     if (computerSelection === playerSelection) {
-        return print( "It's a tie!");
+         console.log( computerSelection, playerSelection,"It's a tie!");
     } else if (computerSelection = "scissors") {
-        return print ("You win! Rock beats Scissors!")
+        console.log(`Computer chose: ${computerSelection} and you chose ${playerSelection} You win! Rock beats Scissors!`)
     } else {
-        return print( "You lose! Paper beats Rock!")
+        console.log( "You lose! Paper beats Rock!")
     }
     }
         
 const playerSelection = "Rock";
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection,computerSelection));
+playRound("Rock","");
