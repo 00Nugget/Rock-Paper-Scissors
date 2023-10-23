@@ -7,8 +7,8 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection){
     if (computerSelection === playerSelection) {
          console.log( computerSelection, playerSelection,"It's a tie!");
-    } else if (computerSelection = "scissors") {
-        console.log(`Computer chose: ${computerSelection} and you chose ${playerSelection} You win! Rock beats Scissors!`)
+    } else if (computerSelection = "Scissors") {
+        console.log(`Computer chose: "${computerSelection}" and you chose: "${playerSelection}" You win! Rock beats Scissors!`)
     } else {
         console.log( "You lose! Paper beats Rock!")
     }
