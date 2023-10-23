@@ -1,14 +1,21 @@
-let choices = ["Rock" , "Paper", "Scissors"];
+let choices = [
+    "Rock" , 
+    "Paper", 
+    "Scissors" 
+];
 
+//function getComputerChoice() {
+   // return (choices[(Math.floor(Math.random() * choices.length))]);
+//}
 function getComputerChoice() {
-    return (choices[(Math.floor(Math.random() * choices.length))]);
-
+    return choices[Math.floor(Math.random() *choices.length )];
 }
+
 function playRound(playerSelection, computerSelection){
     if (computerSelection === playerSelection) {
-         console.log( computerSelection, playerSelection,"It's a tie!");
-    } else if (computerSelection = "Scissors") {
-        console.log(`Computer chose: "${computerSelection}" and you chose: "${playerSelection}" You win! Rock beats Scissors!`)
+         console.log( `Computer chose: "${computerSelection}." You chose: "${playerSelection}." It's a tie!`);
+    } else if (computerSelection === "Scissors") {
+        console.log(`Computer chose: "${computerSelection}" and you chose: "${playerSelection}". You win! Rock beats Scissors!`)
     } else {
         console.log( "You lose! Paper beats Rock!")
     }
@@ -17,4 +24,4 @@ function playRound(playerSelection, computerSelection){
 const playerSelection = "Rock";
 const computerSelection = getComputerChoice();
 
-playRound("Rock","");
+playRound(playerSelection,computerSelection);
