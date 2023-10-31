@@ -10,7 +10,7 @@ function getComputerChoice() {
 }
 let computerScore = 0;
 let playerScore = 0;
-let noContestScore = 0;
+
 
 function playRound(computerSelection, playerSelection) {  //playRound function goes through all the possible outcomes 
     if (computerSelection === playerSelection) {
