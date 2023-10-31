@@ -14,36 +14,36 @@ let playerScore = 0;
 
 function playRound(computerSelection, playerSelection) {  //playRound function goes through all the possible outcomes 
     if (computerSelection === playerSelection) {
-        return console.log(playerSelection, computerSelection), playerScore+0, computerScore+0;
+        return console.log("Player chose: " +playerSelection,"Computer chose: " + computerSelection +" .Draw!"), playerScore+0, computerScore+0;
       } 
       else if (computerSelection === "Scissors") {
         if (playerSelection === "Rock") {
-          return console.log("P: "+ playerSelection, "C: "+ computerSelection), playerScore++, computerScore+0;
+          return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection), playerScore++, computerScore+0;
             } 
           else if (playerSelection === "Paper") {
-            return console.log("P: "+ playerSelection, "C: "+ computerSelection),computerScore++,playerScore+0;
+            return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection),computerScore++,playerScore+0;
           }
         }
       else if (computerSelection === "Rock") {
           if (playerSelection === "Paper") {
-            return console.log("P: "+ playerSelection, "C: "+ computerSelection),playerScore++, computerScore+0;
+            return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection),playerScore++, computerScore+0;
             }
         else if (playerSelection === "Scissors") {
-          return console.log("P: "+ playerSelection, "C: "+ computerSelection),computerScore++,playerScore+0;
+          return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection),computerScore++,playerScore+0;
         }
         }
       else if (computerSelection ==="Paper") {
           if (playerSelection === "Scissors") {
-              return console.log("P: "+ playerSelection, "C: "+ computerSelection),playerScore++,computerScore+0;
+              return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection),playerScore++,computerScore+0;
           }
           else if (playerSelection === "Rock"){
-            return console.log("P: "+ playerSelection, "C: "+ computerSelection),computerScore++,playerScore+0;
+            return console.log("Player chose: "+ playerSelection, "Computer chose: "+ computerSelection),computerScore++,playerScore+0;
         }
       }
     }
 
 
-for (let i = 0; i < 100; i++) { // Plays up to 5 rounds of the game
+for (let i = 0; i < 1000; i++) { // Plays up to 5 rounds of the game
 let playerSelection = prompt("Rock, Paper, Scissors?", "Rock"); //defining player choice here with a prompt each time asking for RPS (Rock paper scissors)
 const computerSelection = getComputerChoice();
 playRound(computerSelection,playerSelection);
