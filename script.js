@@ -43,24 +43,27 @@ function playRound(computerSelection, playerSelection) {  //playRound function g
     }
 
 
-for (let i = 0; i < 5; i++) { // Plays up to 5 rounds of the game
+for (let i = 0; i < 100; i++) { // Plays up to 5 rounds of the game
 let playerSelection = prompt("Rock, Paper, Scissors?", "Rock"); //defining player choice here with a prompt each time asking for RPS (Rock paper scissors)
 const computerSelection = getComputerChoice();
 playRound(computerSelection,playerSelection);
 console.log("Your Score: "+ playerScore);
 console.log("Computer Score: " + computerScore);
-
+if (playerScore === 3) {
+  break; 
+ }
+ if (computerScore ===3) {
+  break;
+ }
 }
 
-
-
-/* function game(playerScore, computerScore) {
-if (playerScore === 3) { //if player score = 3, they win
-  return console.log(playerVictory);
+function game() {
+  if (playerScore > computerScore) {
+   return console.log ("PLAYER WINS. REFRESH PAGE TO TRY AGAIN")
+  } else {
+    return console.log("COMPUTER WINS. REFRESH PAGE TO TRY AGAIN.")
   }
-
-  if (computerScore === 3) {
-    return console.log(computerVictory);
-  }
+  
 }
- */
+
+game();
